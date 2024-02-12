@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  href="css/reset.css" type="text/css">
+    <link rel="stylesheet"  href="css/login.css" type="text/css">
+    <link rel="stylesheet"  href="css/main.css" type="text/css">
+    <title>GraphQL</title>
+</head>
+<body>
+    <div class="popup" id="login-container">
+        <div id="loginPopup">
+            <div class="popup-content-login">
+                <h2 class="form-name">Login with 01 credentials</h2>
+                <form method="POST" class="form" id="login-form">
+                    <div class="input-container">
+                        <input class="content-name" type="text" id="identifier" name="identifier" required>
+                        <label for="identifier"><span class="label-name">Username or email</span></label>
+                    </div>
+                    <div class="input-container">
+                        <input class="content-name" type="password" id="password" name="password" required>
+                        <label for="password"><span class="label-name">Password</span></label>
+                    </div>
+                    <div class="submit">
+                        <input type="submit" id="submit" value="Login" >
+                    </div>
+                </form>
+            </div>
+        </div>    
+    </div>
+
+    <div class="error" id="error" style="display: none;">
+        <div class="back-home-wrap" id="back-home">
+            <div class="back-home-error">
+                <a onclick="error()" class="back-home-btn" id="back-home-btn">Go back</a>
+            </div>
+        </div>
+        <div class="error-page">
+            <div class="error-message" id="error-message"></div>
+        </div>
+    </div>
+
+    <div class="app" id="app"  style="display: none;">
+        <div class="header-container">
+            <div class="header">
+                <div class="logo"><img src="https://kood.tech/wp-content/uploads/2021/04/kood-45FFDB.svg"></div>
+                <div class="sign-out" id="logout"><img src="https://icons.veryicon.com/png/o/miscellaneous/gis-layer-legend/starting-point-of-gis-tl.png"></div>
+            </div>
+        </div>
+        
+        <!-- GRAPHS -->
+        <div class="all-graphs">
+            <div class="text-info">
+                <div class="greeting"></div>
+                <div class="current-lvl">
+                    <div class="level-text">
+                        <p class="text">Your current level:</p>
+                    </div>
+                    <div class="level text" id="level"></div>
+                    <div class="total-xp text" id="total-xp"></div>
+                </div>
+                <div class="audit">
+                    <div class="audit-done text" id="done"></div>
+                    <div class="audit-received text" id="received"></div>
+                    <div class="audit-ratio text" id="ratio"></div>
+                </div>
+            </div>
+            <div class="graphs">
+                <div class="graph xp-progress">
+                    <p class="xp text">XP Progress</p>
+                    <svg class="xp-progression" id="xp-progression"></svg>
+                </div>
+                <div class="graph skills">
+                    <p class="pie-chart">Your projects</p>
+                    <div class="pie">
+                        <svg id="pie"></svg>
+                    </div>
+                    <div id="info" class="info"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+</body>
+</html>

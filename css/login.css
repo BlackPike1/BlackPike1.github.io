@@ -1,0 +1,25 @@
+.error-page {
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.error-message {
+    color: #ff0000; 
+}
+
+.back-home-wrap {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.submit input {
+    background-color: #384E77; 
+    color: #fff; 
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
